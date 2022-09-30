@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element alarmSystem_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_alarm_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_btn_down_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_btn_set_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_btn_up_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_h0_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_h1_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_m0_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_m1_bfm
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_s0_bfm
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_display_s1_bfm
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_swc_alarm_bfm
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element alarmSystem_inst_swc_sel_bfm
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA5F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="alarmSystem" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module name="alarmSystem_inst" kind="alarmSystem" version="1.0" enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="alarmSystem" />
+ </module>
+ <module
+   name="alarmSystem_inst_alarm_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_btn_down_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_btn_set_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_btn_up_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_h0_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_h1_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_m0_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_m1_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_s0_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_display_s1_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="8" />
+ </module>
+ <module
+   name="alarmSystem_inst_reset_bfm"
+   kind="altera_avalon_reset_source"
+   version="20.1"
+   enabled="1">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   name="alarmSystem_inst_swc_alarm_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="alarmSystem_inst_swc_sel_bfm"
+   kind="altera_conduit_bfm"
+   version="20.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <connection
+   kind="clock"
+   version="20.1"
+   start="alarmSystem_inst_clk_bfm.clk"
+   end="alarmSystem_inst.clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="alarmSystem_inst_clk_bfm.clk"
+   end="alarmSystem_inst_reset_bfm.clk" />
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_alarm_bfm.conduit"
+   end="alarmSystem_inst.alarm">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_btn_down_bfm.conduit"
+   end="alarmSystem_inst.btn_down">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_btn_set_bfm.conduit"
+   end="alarmSystem_inst.btn_set">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_btn_up_bfm.conduit"
+   end="alarmSystem_inst.btn_up">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_h0_bfm.conduit"
+   end="alarmSystem_inst.display_h0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_h1_bfm.conduit"
+   end="alarmSystem_inst.display_h1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_m0_bfm.conduit"
+   end="alarmSystem_inst.display_m0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_m1_bfm.conduit"
+   end="alarmSystem_inst.display_m1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_s0_bfm.conduit"
+   end="alarmSystem_inst.display_s0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_display_s1_bfm.conduit"
+   end="alarmSystem_inst.display_s1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_swc_alarm_bfm.conduit"
+   end="alarmSystem_inst.swc_alarm">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="alarmSystem_inst_swc_sel_bfm.conduit"
+   end="alarmSystem_inst.swc_sel">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="20.1"
+   start="alarmSystem_inst_reset_bfm.reset"
+   end="alarmSystem_inst.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
