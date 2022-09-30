@@ -10,3 +10,4 @@
 
 - If you get an error message like "Failed to execute wsl dos2unix create-this-bsp...." this is solved by: https://www.intel.com/content/www/us/en/support/programmable/articles/000086893.html and https://www.terasic.com.tw/wiki/Getting_Start_Install_WSL
 
+- Platform design tutorial: https://www.intel.com/content/www/us/en/docs/programmable/683609/21-3/creating-a-system-with.html
