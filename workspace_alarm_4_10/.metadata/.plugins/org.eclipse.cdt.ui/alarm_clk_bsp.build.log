@@ -1,0 +1,6 @@
+22:26:37 **** Clean-only build of configuration Nios II for project alarm_clk_bsp ****
+make clean 
+[BSP clean complete]
+
+22:26:40 Build Finished (took 3s.240ms)
+

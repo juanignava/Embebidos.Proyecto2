@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/quartus_embebidos/alarm_4_10/software/alarm_clk/obj/default/runtime/sim/mentor
+valarm_clk_UART
+Z1 !s110 1664944149
+!i10b 1
+!s100 CSh7Y]Al1QO8h]J<<D2V31
+IH6X6eAP7cfM8>e5boTQBK2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1664943705
+Z4 8C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/submodules/alarm_clk_UART.v
+Z5 FC:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/submodules/alarm_clk_UART.v
+L0 331
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1664944149.000000
+Z8 !s107 C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/submodules/alarm_clk_UART.v|
+Z9 !s90 -reportprogress|300|C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/submodules/alarm_clk_UART.v|-work|UART|
+!i113 1
+Z10 o-work UART
+Z11 tCvgOpt 0
+nalarm_clk_@u@a@r@t
+valarm_clk_UART_scfifo_r
+R1
+!i10b 1
+!s100 C=AYL@G;=WM`1AG540][z0
+I:V]7nh`HPz<Az:jBQ?E;<1
+R2
+R0
+R3
+R4
+R5
+L0 243
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nalarm_clk_@u@a@r@t_scfifo_r
+valarm_clk_UART_scfifo_w
+R1
+!i10b 1
+!s100 II<Hoe8;`Eab=058LPKl61
+Iz8`EB=HXDn>e1EmR:UGKF2
+R2
+R0
+R3
+R4
+R5
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nalarm_clk_@u@a@r@t_scfifo_w
+valarm_clk_UART_sim_scfifo_r
+R1
+!i10b 1
+!s100 MT^;6k^=Q>n:^mj4U7Sb03
+IRdfS[WQI@zU8_FRY=3k``1
+R2
+R0
+R3
+R4
+R5
+L0 164
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nalarm_clk_@u@a@r@t_sim_scfifo_r
+valarm_clk_UART_sim_scfifo_w
+R1
+!i10b 1
+!s100 3EWclZJ5Y?GlILbK=1HC62
+Ig9hLIh97A>WkLZR[E7kE;0
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nalarm_clk_@u@a@r@t_sim_scfifo_w

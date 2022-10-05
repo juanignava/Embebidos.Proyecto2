@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\quartus_embebidos\\alarm_4_10\\software\\alarm_clk
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\quartus_embebidos\\alarm_4_10\\alarm_clk.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\quartus_embebidos\\alarm_4_10\\software\\alarm_clk_bsp

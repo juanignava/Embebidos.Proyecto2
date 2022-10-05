@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/quartus_embebidos/alarm_4_10/software/alarm_clk/obj/default/runtime/sim/mentor
+valarm_clk_tb
+!s110 1664944152
+!i10b 1
+!s100 PK6@Q=zoJW;2N_H`Rj_]O0
+IfH@Ukf25<LnYB5fbZTm2S2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1664943689
+8C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/alarm_clk_tb.v
+FC:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/alarm_clk_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1664944152.000000
+!s107 C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/alarm_clk_tb.v|
+!s90 -reportprogress|300|C:/quartus_embebidos/alarm_4_10/alarm_clk/testbench/alarm_clk_tb/simulation/alarm_clk_tb.v|
+!i113 1
+tCvgOpt 0
