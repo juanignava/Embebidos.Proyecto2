@@ -27,11 +27,20 @@ module alarm_clk_mm_interconnect_0 (
 		output wire [31:0] ALARM_s1_writedata,                    //                                .writedata
 		output wire        ALARM_s1_chipselect,                   //                                .chipselect
 		output wire [1:0]  BTN_DOWN_s1_address,                   //                     BTN_DOWN_s1.address
+		output wire        BTN_DOWN_s1_write,                     //                                .write
 		input  wire [31:0] BTN_DOWN_s1_readdata,                  //                                .readdata
+		output wire [31:0] BTN_DOWN_s1_writedata,                 //                                .writedata
+		output wire        BTN_DOWN_s1_chipselect,                //                                .chipselect
 		output wire [1:0]  BTN_SET_s1_address,                    //                      BTN_SET_s1.address
+		output wire        BTN_SET_s1_write,                      //                                .write
 		input  wire [31:0] BTN_SET_s1_readdata,                   //                                .readdata
+		output wire [31:0] BTN_SET_s1_writedata,                  //                                .writedata
+		output wire        BTN_SET_s1_chipselect,                 //                                .chipselect
 		output wire [1:0]  BTN_UP_s1_address,                     //                       BTN_UP_s1.address
+		output wire        BTN_UP_s1_write,                       //                                .write
 		input  wire [31:0] BTN_UP_s1_readdata,                    //                                .readdata
+		output wire [31:0] BTN_UP_s1_writedata,                   //                                .writedata
+		output wire        BTN_UP_s1_chipselect,                  //                                .chipselect
 		output wire [8:0]  CPU_debug_mem_slave_address,           //             CPU_debug_mem_slave.address
 		output wire        CPU_debug_mem_slave_write,             //                                .write
 		output wire        CPU_debug_mem_slave_read,              //                                .read
@@ -1901,10 +1910,11 @@ module alarm_clk_mm_interconnect_0 (
 		.uav_lock               (btn_set_s1_agent_m0_lock),              //                         .lock
 		.uav_debugaccess        (btn_set_s1_agent_m0_debugaccess),       //                         .debugaccess
 		.av_address             (BTN_SET_s1_address),                    //      avalon_anti_slave_0.address
+		.av_write               (BTN_SET_s1_write),                      //                         .write
 		.av_readdata            (BTN_SET_s1_readdata),                   //                         .readdata
-		.av_write               (),                                      //              (terminated)
+		.av_writedata           (BTN_SET_s1_writedata),                  //                         .writedata
+		.av_chipselect          (BTN_SET_s1_chipselect),                 //                         .chipselect
 		.av_read                (),                                      //              (terminated)
-		.av_writedata           (),                                      //              (terminated)
 		.av_begintransfer       (),                                      //              (terminated)
 		.av_beginbursttransfer  (),                                      //              (terminated)
 		.av_burstcount          (),                                      //              (terminated)
@@ -1913,7 +1923,6 @@ module alarm_clk_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                  //              (terminated)
 		.av_writebyteenable     (),                                      //              (terminated)
 		.av_lock                (),                                      //              (terminated)
-		.av_chipselect          (),                                      //              (terminated)
 		.av_clken               (),                                      //              (terminated)
 		.uav_clken              (1'b0),                                  //              (terminated)
 		.av_debugaccess         (),                                      //              (terminated)
@@ -1965,10 +1974,11 @@ module alarm_clk_mm_interconnect_0 (
 		.uav_lock               (btn_up_s1_agent_m0_lock),               //                         .lock
 		.uav_debugaccess        (btn_up_s1_agent_m0_debugaccess),        //                         .debugaccess
 		.av_address             (BTN_UP_s1_address),                     //      avalon_anti_slave_0.address
+		.av_write               (BTN_UP_s1_write),                       //                         .write
 		.av_readdata            (BTN_UP_s1_readdata),                    //                         .readdata
-		.av_write               (),                                      //              (terminated)
+		.av_writedata           (BTN_UP_s1_writedata),                   //                         .writedata
+		.av_chipselect          (BTN_UP_s1_chipselect),                  //                         .chipselect
 		.av_read                (),                                      //              (terminated)
-		.av_writedata           (),                                      //              (terminated)
 		.av_begintransfer       (),                                      //              (terminated)
 		.av_beginbursttransfer  (),                                      //              (terminated)
 		.av_burstcount          (),                                      //              (terminated)
@@ -1977,7 +1987,6 @@ module alarm_clk_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                  //              (terminated)
 		.av_writebyteenable     (),                                      //              (terminated)
 		.av_lock                (),                                      //              (terminated)
-		.av_chipselect          (),                                      //              (terminated)
 		.av_clken               (),                                      //              (terminated)
 		.uav_clken              (1'b0),                                  //              (terminated)
 		.av_debugaccess         (),                                      //              (terminated)
@@ -2029,10 +2038,11 @@ module alarm_clk_mm_interconnect_0 (
 		.uav_lock               (btn_down_s1_agent_m0_lock),             //                         .lock
 		.uav_debugaccess        (btn_down_s1_agent_m0_debugaccess),      //                         .debugaccess
 		.av_address             (BTN_DOWN_s1_address),                   //      avalon_anti_slave_0.address
+		.av_write               (BTN_DOWN_s1_write),                     //                         .write
 		.av_readdata            (BTN_DOWN_s1_readdata),                  //                         .readdata
-		.av_write               (),                                      //              (terminated)
+		.av_writedata           (BTN_DOWN_s1_writedata),                 //                         .writedata
+		.av_chipselect          (BTN_DOWN_s1_chipselect),                //                         .chipselect
 		.av_read                (),                                      //              (terminated)
-		.av_writedata           (),                                      //              (terminated)
 		.av_begintransfer       (),                                      //              (terminated)
 		.av_beginbursttransfer  (),                                      //              (terminated)
 		.av_burstcount          (),                                      //              (terminated)
@@ -2041,7 +2051,6 @@ module alarm_clk_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                  //              (terminated)
 		.av_writebyteenable     (),                                      //              (terminated)
 		.av_lock                (),                                      //              (terminated)
-		.av_chipselect          (),                                      //              (terminated)
 		.av_clken               (),                                      //              (terminated)
 		.uav_clken              (1'b0),                                  //              (terminated)
 		.av_debugaccess         (),                                      //              (terminated)

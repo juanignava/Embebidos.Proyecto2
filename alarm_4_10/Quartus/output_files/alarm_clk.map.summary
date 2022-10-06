@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Oct 05 00:35:04 2022
+Analysis & Synthesis Status : Successful - Wed Oct 05 22:58:18 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : alarm_clk
 Top-level Entity Name : alarm_clk
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1079
+Total registers : 1094
 Total pins : 50
 Total virtual pins : 0
 Total block memory bits : 76,800

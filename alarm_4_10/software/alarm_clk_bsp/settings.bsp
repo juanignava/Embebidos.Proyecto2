@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 5, 2022 12:15:29 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1664950529372</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 5, 2022 10:40:02 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1665031202641</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\quartus_embebidos\alarm_4_10\software\alarm_clk_bsp</BspGeneratedLocation>
         <BspSettingsFile>C:\quartus_embebidos\alarm_4_10\software\alarm_clk_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\alarm_clk.sopcinfo</SopcDesignFile>

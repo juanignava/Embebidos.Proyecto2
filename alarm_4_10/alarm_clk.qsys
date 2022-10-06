@@ -377,7 +377,7 @@
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
+  <parameter name="generateIRQ" value="true" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
@@ -391,7 +391,7 @@
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
+  <parameter name="generateIRQ" value="true" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
@@ -405,7 +405,7 @@
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
+  <parameter name="generateIRQ" value="true" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
@@ -484,7 +484,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="3" />
+  <parameter name="internalIrqMaskSystemInfo" value="31" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -658,7 +658,7 @@
    version="18.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName" value="$${FILENAME}_RAM" />
+  <parameter name="autoInitializationFileName" value="alarm_clk_RAM" />
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="32" />
@@ -911,6 +911,15 @@
  </connection>
  <connection kind="interrupt" version="18.1" start="CPU.irq" end="TIMER.irq">
   <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection kind="interrupt" version="18.1" start="CPU.irq" end="BTN_UP.irq">
+  <parameter name="irqNumber" value="2" />
+ </connection>
+ <connection kind="interrupt" version="18.1" start="CPU.irq" end="BTN_SET.irq">
+  <parameter name="irqNumber" value="3" />
+ </connection>
+ <connection kind="interrupt" version="18.1" start="CPU.irq" end="BTN_DOWN.irq">
+  <parameter name="irqNumber" value="4" />
  </connection>
  <connection kind="reset" version="18.1" start="CLK.clk_reset" end="CPU.reset" />
  <connection kind="reset" version="18.1" start="CLK.clk_reset" end="UART.reset" />

@@ -81,6 +81,7 @@
 #include "system.h"
 #include "alt_types.h"
 #include "sys/alt_stdio.h"
+//#include "unistd.h"
 
 
 #define TRUE 1
@@ -89,6 +90,7 @@
 #define SEC 2
 #define MIN 3
 #define HR 4
+#define NA 5
 
 volatile alt_u32 alt_irq_active    = 0;
 
@@ -128,12 +130,12 @@ volatile unsigned char *alarm_ptr = (unsigned char*) ALARM_BASE;
 volatile unsigned char *timer_base_ptr = (unsigned char *) TIMER_BASE;
 
 // Current alarm hour
-unsigned short alarm[3] = {0, 0, 0};
+unsigned short _alarm[3] = {0, 0, 0};
 // Current hour
 unsigned short hour[3] = {0, 0, 0};
 // To activate and deactivate the Alarm
 short is_activated = FALSE;
-short time_unit_sel = SEC;
+short time_unit_sel = NA;
 unsigned char irqtimer_stall = FALSE;
 unsigned char first = TRUE;
 unsigned char ud_buttons_en = FALSE;
@@ -449,7 +451,6 @@ int alt_irq_register (alt_u32 id,
  * Handler for alarm set button interrupt.
  */
 static void btn_set_respond(void* context, alt_u32 id) {
-
 	up_pressed = FALSE;
 	down_pressed = FALSE;
 	*alarm_ptr = (unsigned char) 0;
@@ -462,27 +463,39 @@ static void btn_set_respond(void* context, alt_u32 id) {
 	if (!set_pressed) {
 		alt_putstr("Button set\n");
 		set_pressed = TRUE;
-		if (irqtimer_stall) {
+
+		//if (irqtimer_stall) {
 			switch(time_unit_sel)
 			{
+			case NA:
+				time_unit_sel = SEC;
+				alt_putstr("SEC\n");
+				break;
 			case SEC:
 				time_unit_sel = MIN;
+				alt_putstr("MIN\n");
 				break;
 			case MIN:
 				time_unit_sel = HR;
+				alt_putstr("HR\n");
 				break;
 			case HR:
-				time_unit_sel = SEC;
-				irqtimer_stall = FALSE;
-				alt_irq_enable(TIMER_IRQ);
+				alt_putstr("NA\n");
+				time_unit_sel = NA;
+				alt_irq_disable(BTN_UP_IRQ);
+				alt_irq_disable(BTN_DOWN_IRQ);
+				ud_buttons_en = FALSE;
+				//set_pressed = FALSE;
+				//irqtimer_stall = FALSE;
+				//alt_irq_enable(TIMER_IRQ);
+				//sleep(2);
 				break;
 			}
-		} else {
+		/*} else {
+			alt_putstr("Button already set\n");
 			irqtimer_stall = TRUE;
 			alt_irq_disable(TIMER_IRQ);
-		}
-	} else {
-		alt_putstr("Button already set\n");
+		}*/
 	}
 }
 
@@ -498,8 +511,6 @@ static void btn_up_respond(void* context, alt_u32 id){
 	if (!up_pressed) {
 		alt_putstr("Button up\n");
 		up_pressed = TRUE;
-	} else {
-		alt_putstr("Button already set up\n");
 	}
 }
 
@@ -515,9 +526,6 @@ static void btn_down_respond(void* context, alt_u32 id) {
 	if (!down_pressed) {
 		alt_putstr("Button down\n");
 		down_pressed = TRUE;
-
-	} else {
-		alt_putstr("Button already set down\n");
 	}
 }
 
@@ -525,9 +533,7 @@ static void btn_down_respond(void* context, alt_u32 id) {
  * Buttons init.
  */
 static void buttons_init(void){
-
 	//Set alarm button:
-
 	*(set_clock + 8) = 0x1;
 	*(set_clock + 12) = 0x0;
 	alt_irq_register(BTN_SET_IRQ, BTN_SET_BASE, btn_set_respond);
@@ -626,19 +632,19 @@ void display_hour()
  */
 static void timer_respond(void* context){
 
-	set_pressed = FALSE;
-	ud_buttons_en = FALSE;
+	//set_pressed = FALSE;
+	//ud_buttons_en = FALSE;
 
-	alt_irq_disable(BTN_UP_IRQ);
-	alt_irq_disable(BTN_DOWN_IRQ);
+	//alt_irq_disable(BTN_UP_IRQ);
+	//alt_irq_disable(BTN_DOWN_IRQ);
 
 	/* Acknowledge interrupt by clearing status register */
 	*timer_base_ptr = 0x0;
 
 	add_second();
 
-	if (*swc_alarm == 1 && hour[2] == alarm [2] &&
-			hour[1] == alarm[1] && hour[0] < 30) {
+	if (*swc_alarm == 1 && hour[2] == _alarm [2] &&
+			hour[1] == _alarm[1] && hour[0] < 30) {
 		*alarm_ptr = (unsigned char) 1;
 	} else {
 		*alarm_ptr = (unsigned char) 0;
@@ -650,8 +656,6 @@ static void timer_respond(void* context){
 	set_value(hour[1] / 10, m1_ptr);
 	set_value(hour[2] % 10, h0_ptr);
 	set_value(hour[2] / 10, h1_ptr);
-
-	display_hour();
 }
 
 /**
@@ -700,25 +704,28 @@ int main()
 	while (TRUE)
 	{
 		if (!ud_buttons_en && set_pressed) {
+			alt_putstr("UD BUTTONS EN\n");
 			alt_irq_enable(BTN_UP_IRQ);
 			alt_irq_enable(BTN_DOWN_IRQ);
 			ud_buttons_en = TRUE;
 		}
 
-		alt_printf("Changing %s\n", *swc_sel == 0 ? "Time" : "Alarm");
+		//alt_printf("Changing %s\n", *swc_sel == 0 ? "Time" : "Alarm");
 
 		if (up_pressed) {
 			if (*swc_sel == 0) {
-				if (time_unit_sel == HR) {
-					if (hour[2]<23)
-						hour[2]++;
-					else
-						hour[2] = 0;
-				} else {
-					if (hour[time_unit_sel-2] < 59)
-						hour[time_unit_sel-2]++;
-					else
-						hour[time_unit_sel-2] = 0;
+				if (time_unit_sel != NA) {
+					if (time_unit_sel == HR) {
+						if (hour[2]<23)
+							hour[2]++;
+						else
+							hour[2] = 0;
+					} else {
+						if (hour[time_unit_sel-2] < 59)
+							hour[time_unit_sel-2]++;
+						else
+							hour[time_unit_sel-2] = 0;
+					}
 				}
 
 				set_value(hour[0] % 10, s0_ptr);
@@ -729,32 +736,34 @@ int main()
 				set_value(hour[2] / 10, h1_ptr);
 			} else {
 				if (time_unit_sel == HR) {
-					if (alarm[2]<23)
-						alarm[2]++;
+					if (_alarm[2]<23)
+						_alarm[2]++;
 					else
-						alarm[2] = 0;
+						_alarm[2] = 0;
 				} else if (time_unit_sel == MIN ) {
-					if (alarm[1] < 59)
-						alarm[1]++;
+					if (_alarm[1] < 59)
+						_alarm[1]++;
 					else
-						alarm[1] = 0;
+						_alarm[1] = 0;
 				} else {
-					alt_putstr("Can't set an alarm for seconds\n");
+					alt_putstr("Can't set an _alarm for seconds\n");
 				}
-				alt_printf("Alarm set > %x : %x : %x \n", alarm[2], alarm[1], alarm[0]);
+				alt_printf("Alarm set > %x : %x : %x \n", _alarm[2], _alarm[1], _alarm[0]);
 			}
 		} else if (down_pressed) {
 			if (*swc_sel == 0) {
-				if (time_unit_sel == HR) {
-					if (hour[2]>0)
-						hour[2]--;
-					else
-						hour[2] = 23;
-				} else {
-					if (hour[time_unit_sel-2] > 0)
-						hour[time_unit_sel-2]--;
-					else
-						hour[time_unit_sel-2] = 59;
+				if (time_unit_sel != NA) {
+					if (time_unit_sel == HR) {
+						if (hour[2]>0)
+							hour[2]--;
+						else
+							hour[2] = 23;
+					} else {
+						if (hour[time_unit_sel-2] > 0)
+							hour[time_unit_sel-2]--;
+						else
+							hour[time_unit_sel-2] = 59;
+					}
 				}
 
 				set_value(hour[0] % 10, s0_ptr);
@@ -765,19 +774,19 @@ int main()
 				set_value(hour[2] / 10, h1_ptr);
 			} else {
 				if (time_unit_sel == HR) {
-					if (alarm[2] > 0)
-						alarm[2]--;
+					if (_alarm[2] > 0)
+						_alarm[2]--;
 					else
-						alarm[2] = 23;
+						_alarm[2] = 23;
 				} else if (time_unit_sel == MIN ) {
-					if (alarm[1] > 0)
-						alarm[1]--;
+					if (_alarm[1] > 0)
+						_alarm[1]--;
 					else
-						alarm[1] = 59;
+						_alarm[1] = 59;
 				} else {
 					alt_putstr("Can't set an alarm for seconds\n");
 				}
-				alt_printf("Alarm set > %x : %x : %x \n", alarm[2], alarm[1], alarm[0]);
+				alt_printf("Alarm set > %x : %x : %x \n", _alarm[2], _alarm[1], _alarm[0]);
 			}
 		}
 
@@ -785,8 +794,6 @@ int main()
 		down_pressed = FALSE;
 		set_pressed = FALSE;
 		button_pressed = FALSE;
-
-		display_hour();
 	}
 
 	return 0;

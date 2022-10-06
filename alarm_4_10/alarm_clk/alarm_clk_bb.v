@@ -12,8 +12,8 @@ module alarm_clk (
 	display_s0_export,
 	display_s1_export,
 	reset_reset_n,
-	swc_activate_export,
-	swc_sel_export);	
+	swc_sel_export,
+	swc_activate_export);	
 
 	output		alarm_export;
 	input		btn_down_export;
@@ -27,6 +27,6 @@ module alarm_clk (
 	output	[6:0]	display_s0_export;
 	output	[6:0]	display_s1_export;
 	input		reset_reset_n;
-	input		swc_activate_export;
 	input		swc_sel_export;
+	input		swc_activate_export;
 endmodule

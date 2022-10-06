@@ -239,19 +239,19 @@ module alarm_clk_mm_interconnect_0_router
     end
 
     // ( 0x5040 .. 0x5050 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 15'h5040  && read_transaction  ) begin
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 15'h5040   ) begin
             src_channel = 16'b0001000000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x5050 .. 0x5060 )
-    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 15'h5050  && read_transaction  ) begin
+    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 15'h5050   ) begin
             src_channel = 16'b0000100000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x5060 .. 0x5070 )
-    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 15'h5060  && read_transaction  ) begin
+    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 15'h5060   ) begin
             src_channel = 16'b0000010000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end

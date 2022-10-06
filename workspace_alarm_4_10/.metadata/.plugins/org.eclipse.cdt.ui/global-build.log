@@ -1,4 +1,4 @@
-00:16:29 **** Build of configuration Nios II for project alarm_clk ****
+22:27:29 **** Incremental Build of configuration Nios II for project alarm_clk ****
 make all 
 Info: Building ../alarm_clk_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../alarm_clk_bsp/
@@ -137,7 +137,7 @@ hello_world_small.c: In function 'buttons_init':
 ../alarm_clk_bsp/system.h:118:22: warning: passing argument 2 of 'alt_irq_register' makes pointer from integer without a cast [-Wint-conversion]
  #define BTN_SET_BASE 0x5060
                       ^
-hello_world_small.c:533:32: note: in expansion of macro 'BTN_SET_BASE'
+hello_world_small.c:532:32: note: in expansion of macro 'BTN_SET_BASE'
   alt_irq_register(BTN_SET_IRQ, BTN_SET_BASE, btn_set_respond);
                                 ^
 hello_world_small.c:418:5: note: expected 'void *' but argument is of type 'int'
@@ -147,7 +147,7 @@ In file included from hello_world_small.c:81:0:
 ../alarm_clk_bsp/system.h:145:21: warning: passing argument 2 of 'alt_irq_register' makes pointer from integer without a cast [-Wint-conversion]
  #define BTN_UP_BASE 0x5050
                      ^
-hello_world_small.c:538:31: note: in expansion of macro 'BTN_UP_BASE'
+hello_world_small.c:537:31: note: in expansion of macro 'BTN_UP_BASE'
   alt_irq_register(BTN_UP_IRQ, BTN_UP_BASE, btn_up_respond);
                                ^
 hello_world_small.c:418:5: note: expected 'void *' but argument is of type 'int'
@@ -157,7 +157,7 @@ In file included from hello_world_small.c:81:0:
 ../alarm_clk_bsp/system.h:91:23: warning: passing argument 2 of 'alt_irq_register' makes pointer from integer without a cast [-Wint-conversion]
  #define BTN_DOWN_BASE 0x5040
                        ^
-hello_world_small.c:543:33: note: in expansion of macro 'BTN_DOWN_BASE'
+hello_world_small.c:542:33: note: in expansion of macro 'BTN_DOWN_BASE'
   alt_irq_register(BTN_DOWN_IRQ, BTN_DOWN_BASE, btn_down_respond);
                                  ^
 hello_world_small.c:418:5: note: expected 'void *' but argument is of type 'int'
@@ -168,13 +168,13 @@ hello_world_small.c: In function 'timer_init':
 ../alarm_clk_bsp/system.h:539:20: warning: passing argument 2 of 'alt_irq_register' makes pointer from integer without a cast [-Wint-conversion]
  #define TIMER_BASE 0x5000
                     ^
-hello_world_small.c:627:30: note: in expansion of macro 'TIMER_BASE'
+hello_world_small.c:663:30: note: in expansion of macro 'TIMER_BASE'
   alt_irq_register(TIMER_IRQ, TIMER_BASE /*timer_base_ptr*/, timer_respond);
                               ^
 hello_world_small.c:418:5: note: expected 'void *' but argument is of type 'int'
  int alt_irq_register (alt_u32 id,
      ^
-hello_world_small.c:627:61: warning: passing argument 3 of 'alt_irq_register' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world_small.c:663:61: warning: passing argument 3 of 'alt_irq_register' from incompatible pointer type [-Wincompatible-pointer-types]
   alt_irq_register(TIMER_IRQ, TIMER_BASE /*timer_base_ptr*/, timer_respond);
                                                              ^
 hello_world_small.c:418:5: note: expected 'alt_isr_func {aka void (*)(void *, long unsigned int)}' but argument is of type 'void (*)(void *)'
@@ -183,8 +183,8 @@ hello_world_small.c:418:5: note: expected 'alt_isr_func {aka void (*)(void *, lo
 Info: Linking alarm_clk.elf
 nios2-elf-g++  -T'../alarm_clk_bsp//linker.x' -msys-crt0='../alarm_clk_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../alarm_clk_bsp/  -msmallc  -Wl,-Map=alarm_clk.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o alarm_clk.elf obj/default/hello_world_small.o -lm -msys-lib=m
 nios2-elf-insert alarm_clk.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --stderr_dev UART --stdin_dev UART --stdout_dev UART --sopc_system_name alarm_clk --quartus_project_dir "C:/quartus_embebidos/alarm_4_10" --sopcinfo C:/quartus_embebidos/alarm_4_10/software/alarm_clk_bsp/../../alarm_clk.sopcinfo
-Info: (alarm_clk.elf) 4184 Bytes program size (code + initialized data).
-Info:                 3948 Bytes free for stack + heap.
+Info: (alarm_clk.elf) 4784 Bytes program size (code + initialized data).
+Info:                 3348 Bytes free for stack + heap.
 Info: Creating alarm_clk.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source alarm_clk.elf >alarm_clk.objdump
 [alarm_clk build complete]

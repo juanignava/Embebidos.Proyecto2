@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'alarm_clk'
  * SOPC Builder design path: ../../alarm_clk.sopcinfo
  *
- * Generated: Wed Oct 05 00:15:31 CST 2022
+ * Generated: Wed Oct 05 22:25:18 CST 2022
  */
 
 /*
@@ -100,9 +100,9 @@
 #define BTN_DOWN_HAS_IN 1
 #define BTN_DOWN_HAS_OUT 0
 #define BTN_DOWN_HAS_TRI 0
-#define BTN_DOWN_IRQ -1
-#define BTN_DOWN_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define BTN_DOWN_IRQ_TYPE "NONE"
+#define BTN_DOWN_IRQ 4
+#define BTN_DOWN_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define BTN_DOWN_IRQ_TYPE "LEVEL"
 #define BTN_DOWN_NAME "/dev/BTN_DOWN"
 #define BTN_DOWN_RESET_VALUE 0
 #define BTN_DOWN_SPAN 16
@@ -127,9 +127,9 @@
 #define BTN_SET_HAS_IN 1
 #define BTN_SET_HAS_OUT 0
 #define BTN_SET_HAS_TRI 0
-#define BTN_SET_IRQ -1
-#define BTN_SET_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define BTN_SET_IRQ_TYPE "NONE"
+#define BTN_SET_IRQ 3
+#define BTN_SET_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define BTN_SET_IRQ_TYPE "LEVEL"
 #define BTN_SET_NAME "/dev/BTN_SET"
 #define BTN_SET_RESET_VALUE 0
 #define BTN_SET_SPAN 16
@@ -154,9 +154,9 @@
 #define BTN_UP_HAS_IN 1
 #define BTN_UP_HAS_OUT 0
 #define BTN_UP_HAS_TRI 0
-#define BTN_UP_IRQ -1
-#define BTN_UP_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define BTN_UP_IRQ_TYPE "NONE"
+#define BTN_UP_IRQ 2
+#define BTN_UP_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define BTN_UP_IRQ_TYPE "LEVEL"
 #define BTN_UP_NAME "/dev/BTN_UP"
 #define BTN_UP_RESET_VALUE 0
 #define BTN_UP_SPAN 16

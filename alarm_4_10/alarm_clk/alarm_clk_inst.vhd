@@ -12,8 +12,8 @@
 			display_s0_export   : out std_logic_vector(6 downto 0);        -- export
 			display_s1_export   : out std_logic_vector(6 downto 0);        -- export
 			reset_reset_n       : in  std_logic                    := 'X'; -- reset_n
-			swc_activate_export : in  std_logic                    := 'X'; -- export
-			swc_sel_export      : in  std_logic                    := 'X'  -- export
+			swc_sel_export      : in  std_logic                    := 'X'; -- export
+			swc_activate_export : in  std_logic                    := 'X'  -- export
 		);
 	end component alarm_clk;
 
@@ -31,7 +31,7 @@
 			display_s0_export   => CONNECTED_TO_display_s0_export,   --   display_s0.export
 			display_s1_export   => CONNECTED_TO_display_s1_export,   --   display_s1.export
 			reset_reset_n       => CONNECTED_TO_reset_reset_n,       --        reset.reset_n
-			swc_activate_export => CONNECTED_TO_swc_activate_export, -- swc_activate.export
-			swc_sel_export      => CONNECTED_TO_swc_sel_export       --      swc_sel.export
+			swc_sel_export      => CONNECTED_TO_swc_sel_export,      --      swc_sel.export
+			swc_activate_export => CONNECTED_TO_swc_activate_export  -- swc_activate.export
 		);
 

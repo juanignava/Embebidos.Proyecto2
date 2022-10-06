@@ -184,19 +184,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "swc_sel_export",
-					"strict" : false
-				},
-				{
-					"name" : "swc_activate_export",
-					"strict" : false
-				},
-				{
 					"name" : "btn_set_export",
 					"strict" : false
 				},
 				{
 					"name" : "btn_up_export",
+					"strict" : false
+				},
+				{
+					"name" : "swc_sel_export",
+					"strict" : false
+				},
+				{
+					"name" : "swc_activate_export",
 					"strict" : false
 				},
 				{

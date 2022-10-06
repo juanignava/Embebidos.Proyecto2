@@ -42,44 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY alarm_clk
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:54:33  OCTOBER 04, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_reset_synchronizer.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_reset_controller.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_slave_translator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_slave_agent.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_master_translator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_master_agent.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_arbitrator.sv
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_avalon_sc_fifo.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_UART.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_TIMER.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_RAM.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_mux_001.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_mux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_demux_003.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_demux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_005.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_002.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_001.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_mux_003.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_mux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_demux_001.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_demux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_avalon_st_adapter.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_irq_mapper.sv
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_H0.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_test_bench.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_wrapper.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_tck.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_sysclk.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_BTN_DOWN.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_ALARM.v
-set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/alarm_clk.v
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
@@ -138,4 +100,47 @@ set_location_assignment PIN_AD27 -to display_s1_export[6]
 set_location_assignment PIN_AF28 -to display_s0_export[4]
 set_location_assignment PIN_AG28 -to display_s0_export[5]
 set_location_assignment PIN_AH28 -to display_s0_export[6]
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_reset_synchronizer.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_reset_controller.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_slave_translator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_slave_agent.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_master_translator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_master_agent.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/altera_merlin_arbitrator.sv
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/altera_avalon_sc_fifo.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_UART.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_TIMER.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_SWC_ALARM.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_RAM.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_mux_001.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_demux_003.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_rsp_demux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_005.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_002.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router_001.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_mux_003.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_demux_001.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_cmd_demux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0_avalon_st_adapter.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_mm_interconnect_0.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_irq_mapper.sv
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_H0.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_test_bench.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_wrapper.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_tck.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu_debug_slave_sysclk.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU_cpu.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_CPU.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_BTN_DOWN.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/submodules/alarm_clk_ALARM.v
+set_global_assignment -name VERILOG_FILE ../alarm_clk/synthesis/alarm_clk.v
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

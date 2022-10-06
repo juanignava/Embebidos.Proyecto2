@@ -11,7 +11,7 @@
 		.display_s0_export   (<connected-to-display_s0_export>),   //   display_s0.export
 		.display_s1_export   (<connected-to-display_s1_export>),   //   display_s1.export
 		.reset_reset_n       (<connected-to-reset_reset_n>),       //        reset.reset_n
-		.swc_activate_export (<connected-to-swc_activate_export>), // swc_activate.export
-		.swc_sel_export      (<connected-to-swc_sel_export>)       //      swc_sel.export
+		.swc_sel_export      (<connected-to-swc_sel_export>),      //      swc_sel.export
+		.swc_activate_export (<connected-to-swc_activate_export>)  // swc_activate.export
 	);
 
