@@ -575,7 +575,7 @@ int set_value(unsigned char value, volatile unsigned char* reg)
 		*reg = 0b0010010;
 		break;
 	case 6:
-		*reg = 0b0000010;
+		*reg = 0b0000011;
 		break;
 	case 7:
 		*reg = 0b1111000;
@@ -584,7 +584,7 @@ int set_value(unsigned char value, volatile unsigned char* reg)
 		*reg = 0b0000000;
 		break;
 	case 9:
-		*reg = 0b0010000;
+		*reg = 0b0011000;
 		break;
 	default:
 		*reg = 0b1111111;
@@ -650,23 +650,12 @@ static void timer_respond(void* context){
 		*alarm_ptr = (unsigned char) 0;
 	}
 
-	if (*swc_sel == 0){
-		set_value(hour[0] % 10, s0_ptr);
-		set_value(hour[0] / 10, s1_ptr);
-		set_value(hour[1] % 10, m0_ptr);
-		set_value(hour[1] / 10, m1_ptr);
-		set_value(hour[2] % 10, h0_ptr);
-		set_value(hour[2] / 10, h1_ptr);
-	}
-	else{
-		set_value(_alarm[0] % 10, s0_ptr);
-		set_value(_alarm[0] / 10, s1_ptr);
-		set_value(_alarm[1] % 10, m0_ptr);
-		set_value(_alarm[1] / 10, m1_ptr);
-		set_value(_alarm[2] % 10, h0_ptr);
-		set_value(_alarm[2] / 10, h1_ptr);
-	}
-
+	set_value(hour[0] % 10, s0_ptr);
+	set_value(hour[0] / 10, s1_ptr);
+	set_value(hour[1] % 10, m0_ptr);
+	set_value(hour[1] / 10, m1_ptr);
+	set_value(hour[2] % 10, h0_ptr);
+	set_value(hour[2] / 10, h1_ptr);
 }
 
 /**
@@ -760,13 +749,6 @@ int main()
 					alt_putstr("Can't set an _alarm for seconds\n");
 				}
 				alt_printf("Alarm set > %x : %x : %x \n", _alarm[2], _alarm[1], _alarm[0]);
-
-				set_value(_alarm[0] % 10, s0_ptr);
-				set_value(_alarm[0] / 10, s1_ptr);
-				set_value(_alarm[1] % 10, m0_ptr);
-				set_value(_alarm[1] / 10, m1_ptr);
-				set_value(_alarm[2] % 10, h0_ptr);
-				set_value(_alarm[2] / 10, h1_ptr);
 			}
 		} else if (down_pressed) {
 			if (*swc_sel == 0) {
@@ -805,13 +787,6 @@ int main()
 					alt_putstr("Can't set an alarm for seconds\n");
 				}
 				alt_printf("Alarm set > %x : %x : %x \n", _alarm[2], _alarm[1], _alarm[0]);
-
-				set_value(_alarm[0] % 10, s0_ptr);
-				set_value(_alarm[0] / 10, s1_ptr);
-				set_value(_alarm[1] % 10, m0_ptr);
-				set_value(_alarm[1] / 10, m1_ptr);
-				set_value(_alarm[2] % 10, h0_ptr);
-				set_value(_alarm[2] / 10, h1_ptr);
 			}
 		}
 
