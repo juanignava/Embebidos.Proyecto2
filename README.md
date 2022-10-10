@@ -18,7 +18,7 @@
 
 8. Then in the second terminal run `nios2-download --go alarm_clk.elf` make sure the reset in the FPGA is off
 
-9. In the first terminal run ``
+9. In the first terminal run `nios2-terminal`
 
 #### Important links
 
